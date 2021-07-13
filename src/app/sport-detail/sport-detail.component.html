@@ -1,0 +1,26 @@
+<div *ngIf = "sport">
+
+    <h2>{{sport.name | uppercase}} Details</h2>
+    <div ><span id = "newLabel">ID: </span>{{sport.id}}</div>
+    <div><span id = "newLabel">Format: </span>{{sport.format}}</div>
+    <div><span id = "newLabel">Description: </span>{{sport.description}}</div>
+    
+    
+    <div>
+        <h2>Editing Sport</h2>
+      <label for="sport-name">Name: </label>
+      <input id="sport-name" [(ngModel)]="sport.name" placeholder="name">
+    
+      <label for="sport-format">Format: </label>
+      <input id="sport-format" [(ngModel)]="sport.format" placeholder="format">
+    
+      <label for="sport-description">Description: </label>
+      <input id="sport-description" [(ngModel)]="sport.description" placeholder="description">
+    
+    </div>
+
+    <button (click)="save()">Save</button>
+    <br/>
+    <button (click)="goBack()">Go Back</button>
+
+    </div>

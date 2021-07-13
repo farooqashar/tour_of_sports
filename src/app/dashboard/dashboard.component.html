@@ -1,0 +1,9 @@
+<h2>Top Sports</h2>
+<div class="sports-menu">
+    <a *ngFor="let sport of sports"
+    routerLink="/detail/{{sport.id}}">
+    {{sport.name}}
+  </a>
+</div>
+
+<app-sport-search></app-sport-search>

@@ -1,0 +1,36 @@
+
+<body>
+<h2>Sports</h2>
+
+<ul class = "sports">
+    <li *ngFor = "let sport of sports">
+        <a routerLink="/detail/{{sport.id}}">
+            <span class = "inner">{{sport.id}}</span>
+             {{sport.name}}
+        </a>
+        <button class="delete" title="Delete Sport"
+            (click)="delete(sport)">X</button>
+    </li>
+</ul>
+
+<div>
+    
+    <h2>Adding Sport</h2>
+
+    <label for="new-name">Name: </label>
+    <input id="new-name" #sportName />
+
+
+    <label for="new-format">Format: </label>
+    <input id="new-format" #sportFormat />
+
+
+    <label for="new-description">Description: </label>
+    <input id="new-description" #sportDescription/>
+    <br/>
+
+    <button class="add-button" (click)="add(sportName.value,sportFormat.value,sportDescription.value); sportName.value=''; sportFormat.value=''; sportDescription.value = ''">
+      Add Sport
+    </button>
+  </div>
+</body>
